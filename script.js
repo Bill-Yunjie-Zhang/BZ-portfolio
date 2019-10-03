@@ -96,194 +96,194 @@ setTimeout(showOverlay, 4000);
 
 $("#map1").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>Bill Zhang</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='1-1.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map2").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($('<h2>"Team Player & Leader"</h2>'));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='2-1.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map2-1").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>Geekton</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='2-2.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map2-2").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>C.A.T.E.</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='2-3.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map2-3").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>S.A.C</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='2-4.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map2-4").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>C.D.D.C.</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='2-5.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map3").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($('<h2>"Intern at ZhongXi"</h2>'));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='3-1.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map3-1").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>B.N.V.S.</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='3-2.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map3-2").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>Leman</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='3-3.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map3-3").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>Teacher's Assistant</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='3-4.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map3-4").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>My Internship</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='3-5.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map3-5").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>CoHack</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='3-6.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map3-6").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>Zhxi Logo</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='3-7.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map4").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($('<h2>"Giving back to my Community"</h2>'));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='4-1.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map4-1").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>Weekly Schedule</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='4-4.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map4-2").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>Prep Talks</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='4-3.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map4-3").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($('<h2>Foster Interests in Go</h2>'));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='4-2.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map4-4").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>The Disaster</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='4-5.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map5").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($('<h2>"Devotion in Education"</h2>'));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='5-1.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map5-1").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>The Origin</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='5-2.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map5-2").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>The Beginnin</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='5-3.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map5-3").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>English Teaching</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='5-4.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map5-4").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>Math Teaching</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='5-5.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 $("#map6").hover(
     function(){
-        $("#mapTrailer").find("h2").last().remove();
-        $("#mapTrailer").append($("<h2>Contact & Github</h2>"));
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='6-1.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
-        $("#mapTrailer").find("h2").last().remove();
+        $("#mapTrailer").find("img").remove();
     }
 )
 var init = function(){
