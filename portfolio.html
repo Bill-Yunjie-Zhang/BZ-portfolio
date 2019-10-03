@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>BZ's Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="node_modules/fullpage.js/dist/fullpage.css" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none; 
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+<body class="color-292929">
+  <div id="map" style="position: absolute; right:0px; height:100px; width:209px; background-color: transparent; z-index: 9; margin:0px;">
+    <a id="map1" href="#page1"><img class='minimap' src="1-1.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a id="map2" href="#page2"><img class='minimap' src="2-1.png"></a>
+    <a id="map2-1" href="#page2/1"><img class='minimap' src="2-2.png"></a>
+    <a id="map2-2" href="#page2/2"><img class='minimap' src="2-3.png"></a>
+    <a id="map2-3" href="#page2/3"><img class='minimap' src="2-4.png"></a>
+    <a id="map2-4" href="#page2/4"><img class='minimap' src="2-5.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a id="map3" href="#page3"><img class='minimap' src="3-1.png"></a>
+    <a id="map3-1" href="#page3/1"><img class='minimap' src="3-2.png"></a>
+    <a id="map3-2" href="#page3/2"><img class='minimap' src="3-3.png"></a>
+    <a id="map3-3" href="#page3/3"><img class='minimap' src="3-4.png"></a>
+    <a id="map3-4" href="#page3/4"><img class='minimap' src="3-5.png"></a>
+    <a id="map3-5" href="#page3/5"><img class='minimap' src="3-6.png"></a>
+    <a id="map3-6" href="#page3/6"><img class='minimap' src="3-7.png"></a>
+    <a id="map4" href="#page4"><img class='minimap' src="4-1.png"></a>
+    <a id="map4-1" href="#page4/1"><img class='minimap' src="4-2.png"></a>
+    <a id="map4-2" href="#page4/2"><img class='minimap' src="4-3.png"></a>
+    <a id="map4-3" href="#page4/3"><img class='minimap' src="4-4.png"></a>
+    <a id="map4-4" href="#page4/4"><img class='minimap' src="4-5.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a id="map5" href="#page5"><img class='minimap' src="5-1.png"></a>
+    <a id="map5-1" href="#page5/1"><img class='minimap' src="5-2.png"></a>
+    <a id="map5-2" href="#page5/2"><img class='minimap' src="5-3.png"></a>
+    <a id="map5-3" href="#page5/3"><img class='minimap' src="5-4.png"></a>
+    <a id="map5-4" href="#page5/4"><img class='minimap' src="5-6.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a id="map6" href="#page6"><img class='minimap' src="6-1.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+    <a href="#"><img class='minimap' src="empty.png"></a>
+  </div>
+  <div id="mapTrailer" style="position: absolute; right:300px; top:30px; background-color: transparent; z-index: 9; margin:0px; text-align:center; color: rgb(83,83,83)">  
+  </div>
+
+  <div id="fullpage">
+    <div class="section" id="wrapper1">
+      <div id="particle-slider">
+        <div class="pslides">
+          <div id="first-slide" class="pslide" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAACECAMAAABfy78/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA0ppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzVDQzU4MEREQUFEMTFFOUE4MEZERjAxQjBDMDkwOTgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzVDQzU4MENEQUFEMTFFOUE4MEZERjAxQjBDMDkwOTgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo5YTVlYjVjOC05YTE3LWM5NDAtOGNiZi0wY2UzZDc0MDhmODIiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo5YTVlYjVjOC05YTE3LWM5NDAtOGNiZi0wY2UzZDc0MDhmODIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7bRHBTAAAABlBMVEX///////9VfPVsAAAAAnRSTlP/AOW3MEoAAAXhSURBVHja7N1RgusoDERRaf+bng1MXmOpJATc+m7SGDi2wSQ2J4T8jNEEhACEEIAQAhBCAEIIQAgBCCEAIQQghACEEAIQQgBCCEAIAQghACEEIIQAhBCAEDJvOP9IHRD7mNSx3N1J0VYMNVSuddODLFY8OSJkQ7MSyHpdFoopzwXWBlIMxAAia/UxQFbqApCxQKwCiBUCKbnFKQbyZ10AchiQ+ktQ9F8WTQLKgRhAAFIPpGQC0APkn3UByFQgNSswC+VFByolUgzEAAKQSiBVM+Q2IAaQ04BYGRCTA6lbQ2oDYgC5Bkj+IqQFUreC1AnEAAKQEiBl02OAACRY/dppzLc/r5seNwMxgAAkOOS33Py3AzGAAEQNxAACkB1ARHfuokdjG8blDiAGEIAMBGIAAcjXO4pyIKYAslrNLUAiQ+IlIOIn1rOAKK5DeSCfPj13NKZtaIAIgDhAwkCUq84VQD7swnkeyGKntQKRrf2INleoxnv8aEzf0ABR+gBI5jblz0IAmQrEJgLRLY6KNlcIx3rwaAqALHbp20Byc8zTgVgGSPhaAJALgDhAYkCilQLISCC51b4qIMLHa6LNFUofsZLW1NAAiU4z9wLxM4Akmh0g84DYTCD/W8aKrkUAYRVLsyh/KRALjpvMBhif8KAQIFofu4H4AUBCTb9apK2hARKYgHQC+VFEuKT6ffCr+/F7twNkuI97gVgEiHX3I0Bm32DtBxKqQCsQPwxIfHXmASCafXYVQH6WKANibwIxgCh9AGTrHVbPdncHSHAC0gfkHwV0OwM/7+zf34tqIAYQrY+rgdhbQNLr+7cDkX2RoRdIoApre1YuBfI1DpDwBMRVP5thmbe1SIAsCAHI00CCu2MBknzqMB2IAyRxg9UE5I+/F3hbmZ8GZvHnA3GApHxsA+I9QOxxIA6QnI+LgDhAhH1yGRAbDSQwOwj9DPUf9XoOiAMk7WMXEG8DYkVAJKOUK8h0Hx1AQg+5Qz9DDRDmINIJyBNA7GUgLPMmfWwCslSL70AcIDwo1PpoALL0xyIg/xTyKJDXNyvagUC8F4g9DuTp74MkfUwGEnqRAUAWK/E6EJ8CJN5fsTd9/K4cQB4EkvWxBchyPQBS1ztvAEn7KAeSmTTG3vTxs3aXAInV500gVgMkVGo2EHP190GmAfl6ynwBiMDHDiAfDiYCxJ8GsvyCkweAKHxUA+m6b1ux9giQxXPNw0D8HiCmA2LvAFkScj8QiY9iILYFiAMEICIfdwKJvswquzw3BYgDRDMBmQ/EWoGku3EyEHsKiMpHLRDbBcQfB+IAEfkASPgeCyCDgch8lAIpe0IfHeoAeQSIzse1QGRvoQLIeUDsJSC2HYgB5CwgSh+VQGwrEAfIo0CkPgAiFQKQwUD8UiDB99Wu/P/lQgA5B4jWRyEQ2w3EI0D8CiAPPygU+zgBiO0HYlWNCZDRE5BKILYfiOuAqIZlD5B3NyvKffQCWTinBzcVekiIS4WM2axoANH9q14gorPwDiCy77qWA7F3geh9lAEJV1MKxANAQkLMpgBZrceNQAp8nAHEWoG4sEAjkI9Xy4eA+EAgNgSIa4EEHvfIgYhWOjrWWYo+q7W1GoFkTgNhIKGze6r1ZgJxgABEd/tTuUYNEICk7jjFQDzU6LcBcYBcA2RBCEDylQDIRiA2CUhsCbbHB0AAElhr+7OBPn56qNFbfJz3Ah2AAETX2guH2tHlDpBZQGwYkOg2kIY+7QDiADkASP6JaAJI9BFreY+e95ZbgABE0+I+BIgDZBoQSwPxz5WONV1dmy8faHGXp3Z5AaQPiJ8KxCt5lANxgMwDYhOBZGpVx6MYSG63EEAagbhLhYiqXPGu7K/HWdbl6e10AAFItkLpw6wAEj+g0gnQqUBcDcSGAvF0teQ6FoAQclKkOABCboeS/yDakhCAEAIQQgBCCEAIAQghACEEIIQAhBCAEEIAQghACAEIIQAhBCCEAIQQgBACEEIAQghACCE/8p8AAwCQEx5/637G8QAAAABJRU5ErkJggg=="></div>
+        </div>
+        <canvas class="draw"></canvas>
+      </div>
+      <img src="hobbies.png" width="100%" style="margin-bottom: 40px">
+    </div>
+
+
+    <div class="section" id="wrapper2">
+      <div class="slide fp-viewing-page2-0" id="teamleader">
+        <h1 class="featurette-heading" style="font-size: 5em; text-align: center">Team Player &amp; Leader</h1>
+      </div>
+
+      <div class="slide fp-viewing-page2-1" id="Geekton">
+        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+          <div class="col-lg-7">
+            <h1 class="featurette-heading">GEEKTON</h1>
+            <h5 class="font-color-5a5a5a">CO-FOUNDER</h5>
+            <p class="lead" style="margin-top: 150px">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-lg-5">
+            <img src="Geekton-logo.png" width="400" height="400">
+          </div>
+        </div>
+      </div>
+
+      <div class="slide fp-viewing-page2-2" id="CATE">
+        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+          <div class="col-lg-5">
+            <ol style="font-size: 25px">
+              <li>Found it very hard to find what I like around campus</li>
+              <li>No apps or anything we could get info from</li>
+              <li>Therefore a friend and I created C.A.T.E</li>
+              <li>We hanged in tough spots</li>
+              <li>we could gave all our fellow students acess to VIP service</li>
+            </ol>
+            <a href="CATE-profile.html">Things I contributed to CATE, and things I learnt -->></a><br>
+            <a href="CATE.html">read the whole story of "CATE AND ME" -->></a>
+          </div> 
+          <div class="col-lg-7">
+            <div class="row">
+              <div class="col-lg-4">
+                <h1 class="featurette-heading">C.A.T.E</h1>
+                <h5 class="font-color-5a5a5a">CO-FOUNDER</h5>
+              </div>
+              <div class="col-lg-8"  style="margin-bottom: 20px">
+                <img src="C.A.T.E.-logo.jpg" style="border-radius: 30px" width="120" height="120">
+              </div>
+            </div>
+            <img src="CATE1.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice" width="600" height="300">
+          </div>
+        </div>
+      </div>  
+
+      <div class="slide fp-viewing-page2-3" id="SAC">
+        <div class="row featurette" style="padding-left:100px; padding-right: 100px"> 
+          <div class="col-lg-7">
+            <div class="row">
+              <div class="col-lg-4">
+                <h1 class="featurette-heading">S.A.C.</h1>
+                <h5 class="font-color-5a5a5a">PRESIDENT</h5>
+              </div>
+              <div class="col-lg-8"  style="margin-bottom: 20px">
+                <img src="SAC-logo.jpg" class="rounded-circle" width="120" height="120">
+              </div>
+            </div>
+            <p style="margin-top: 10px">SAC is one of the four student unions in my school. It is the organization that manages all the clubs in our school and organizes a number of the students' activities in school. It sounded like a great student union, and that was why when I heard about this particular association, I joined instantly. However, it was not after I joined it did I realized it is not as good as it seems. But after a year as its member, I realized I was gradual growing into it, so, I decided to make a difference, to make the association I was in great. After that, there was a-year-long fight as one of the presidents of the group... It was a hard fight, but we eventually achieved in making the SAC the best student union in my school. </p>
+            <a href="SAC-profile.html">Things I contributed to SAC, and things I learnt -->></a><br>
+            <a href="SAC.html">read the whole story of "SAC AND ME" -->></a>
+          </div>
+          <div class="col-md-5">
+            <img src="SAC3.png" height=200 width=400 alt="...">
+            <img src="SAC2.jpg" height=200 width=400 alt="...">          
+          </div>
+        </div>
+      </div>
+
+      <div class="slide fp-viewing-page2-4" id="CDDC">
+        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+          <div class="col-lg-7">
+            <h1 class="featurette-heading">C.D.D.C</h1>
+            <h5 class="font-color-5a5a5a">CO-FOUNDER</h5>
+            <p class="lead" style="margin-top: 150px">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-lg-5">
+            <img src="CDDC-logo.png" width="400" height="400">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section" id="wrapper3">
+      <div class="slide" id="internText">
+        <h1 class="featurette-heading" style="font-size: 5em; text-align: center">Intern at Zhxi</h1>
+      </div>
+
+      <div class="slide" id="BAINIAN">
+        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+          <div class="col-lg-5">
+            <h1 class="featurette-heading">ANZ &amp; ZHXI</h1>
+            <h1 class="featurette-heading">AT BAINIAN</h1>
+            <h5 class="lead font-color-d1b0b2">VOLUNTEER AND TA</h5>
+            <div style="width:100%; height: 1px; background-image: linear-gradient(to right, transparent, #e0e0e0, transparent);"></div>
+            <p style="margin-top: 20px; font-size:20px">A 6 days volunteering and TAing at BN Vocational School (from June 24th to 29) was very rewarding. It was a great opportunity to get to know students who's backgrounds were very different from us and be friends with them and the kind of lives we never had. "We let you know what's coding like, you let us know what's  life like."</p>
+          </div>
+          <div class="col-lg-7">
+            <img src="BNVS.png" height="450px">
+          </div> 
+        </div>
+      </div>
+
+      <div class="slide" id="LEMAN">
+        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+          <div class="col-lg-12">
+            <h1 class="featurette-heading">LEMAN</h1>
+            <h5 class="lead font-color-d1b0b2">TUTOR & CURRICULUM BUILDING</h5>
+            <div style="width:100%; height: 1px; background-image: linear-gradient(to right, transparent, #d1b0b2, transparent);"></div>
+            <p style="margin-top: 10px">I have never taught kids this young before. It was a disaster at first, but because of the patient tutoring and guiding by Landon (who is a great teacher for kindergarten kids) and my constant trying, I gradually got better. And by the end of my time with them, I was really into teaching them.</p>
+          </div>
+          <div class="col-lg-6" style="margin-bottom:20px">
+            <img src="Leman1.jpg" height="400">
+          </div> 
+          <div class="col-lg-6" style="margin: auto; display:inline-flex;flex-direction: column;align-items: center;-webkit-box-align: center;align-content: center;vertical-align: middle">
+            <h1 style="font-size: 30px; text-align: center">What I learnt while my days in Leman: <br>(Order is irrelevant)</h1>
+            <ul style="width: 600px; margin: auto; font-size: 20px">
+                <li>Always prepare more than expected to teach.</li>
+                <li>Treats and rewards are more useful to kindergarten kids than scoffing and punishing.</li>
+                <li>How to write a curriculum.</li>
+                <li>How to make good stories and adjust difficulty for kids.</li>
+                <li>Teaching kids never really need big words.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" id="BOOTCAMPS">
+        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+          <div class="col-lg-7">
+            <h1 class="featurette-heading">BOOTCAMPS</h1>
+            <h5 class="lead font-color-d1b0b2">TEACHER'S ASSISTANT</h5>
+            <div style="width:100%; height: 1px; background-image: linear-gradient(to right, transparent, #e0e0e0, transparent);"></div>
+            <p style="margin-top: 25px">I always love the job of TAing, and I have done a lot of them. Guiding and exploring with other students through their hard times, really make me feel great, especially when we both devote into a job that really pushes our brain to the edge. I think the reason why I prefer TAing than teaching is that I don't really want to be seem as above someone, I want to be part of their team and struggle other. The other reason I love to TA through classes is that I can really learn something new every time I go through the course. </p>
+          </div>
+          <div class="col-lg-5">
+            <img src="TA.png" height="400px">
+          </div> 
+        </div>
+      </div>
+
+      <div class="slide" id="Intern">
+          <div class="row featurette" style="padding: 100px; padding-top: 0px; padding-bottom:200px">
+          <div class="col-lg-5">
+            <img src="Marketing1.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice" width="500" height="1500">
+          </div> 
+          <div class="col-lg-7">
+            <h1 class="featurette-heading">BEING PART OF ZHXI</h1>
+            <h5 class="lead font-color-d1b0b2">DOING ALL SORTS OF THINGS</h5>
+            <img src="theLine.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice"   alt="the line">
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" id="CoHack">
+        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+          <div class="col-lg-6" style="margin: auto; display:inline-flex;flex-direction: column;align-items: center;-webkit-box-align: center;align-content: center;vertical-align: middle">
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <div class="row">
+              <div class="col-lg-6">
+                <h1 class="featurette-heading" style="margin-top: 35px">COHACK</h1>
+              </div>
+              <div class="col-lg-6">
+                <video width="250px" style="border-radius: 30px; border: azure solid 10px" controls> 
+                  <source src="cohack.mp4" type="video/mp4"></source> 
+                </video>
+              </div>
+            </div>
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-lg-6" style="padding-top: 20px">
+            <img src="cohack.png" height="500px">
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" id="Zhxi">
+        <div class="featurette-heading" style="text-align: center">
+          <img src="zhongxi.png">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section" id="wrapper4">
+      <div class="slide" id="givetext">
+        <h1 class="featurette-heading" style="font-size: 5em; text-align: center;">Giving back to</h1>
+  			<h1 class="featurette-heading" style="font-size: 5em; text-align: center;">My Community</h1>
+      </div>
+
+      <div class="slide" id="WEEKLY">
+        <div class="featurette">
+          <img src="weekly.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice" width="100%">
+          <div class="row padding" style="margin-left: 0px; margin-right: 0px">
+            <div class="col-lg-7">
+              <h1 class="featurette-heading">WEEKLY SCHEDULE</h1>
+              <p class="lead" style="margin-top: 20px">Because of the recent flourish of bicycle sharing system, shared bikes are everywhere. Although it is convenient to be able to get on a bike wherever we are, but it can really be a problem if they are not nicely "taken care of". Some people park the bikes where they are not supposed to park, blocking bike lanes and side walks; there are also others who are so hurry to get to their destiny that they don't even care whether the bikes are parked nicely or just rowed to there sides.<br><br> One day a friend and I accidentally fall into this topic, after much thought and planning, we decided that maybe we should do something about it. So we agreed to schedule two hours on Sunday afternoons to do something for the community. Most of the time we help with arranging the shared bikes, we also clean hallways once every month. <br><br> The schedule not only remind myself of thinking twice what "a little convenience for one can be hard works" for others, it also benefits everyone who is living in the community, by having a clean and tidy environment. </p>
+            </div>
+            <div class="col-lg-5">
+              <img src="Community2.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice" width="500" height="500">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" id="prep">
+        <div class="featurette">
+          <img src="prep.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice" width="100%">
+          <div class="row padding" style="margin-left: 0px; margin-right: 0px">
+            <div class="col-lg-7">
+              <h1 class="featurette-heading">PREP TALKS</h1>
+              <p class="lead" style="margin-top: 20px">Before the Zhongkao, which is the test Chinese students take to get to senior high schools,  I never thought I would be able to get to the school I am in right now, but it was my dream. However, the truth was that, I never even for once got into the top 100 list of my school before 9th grade. At the end of 8th grade, I had a really nice talk with a former basketball teammate, who got an unbelievable score on the test, and like me, he was not good at taking tests. He made me realize that I should never blame others or the educational system, which I always think was useless and unfair, for not getting good grades in school. We can really make a difference if when accept that hard work will off. And it seemed it really did, and I really believe he changed the course of my life. And I really others to have that chance, have the chance to meet someone who will help them get out of blank bewilderment when facing hurdles in life especially on critical moments like this. And thanks to my former head teacher Mrs. He and English teacher Mr. Long, I began sharing my own experience and studying tricks with junior high school students hoping to make a difference to their lives.</p>
+            </div>
+            <div class="col-lg-5">
+              <img src="prep1.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice" width="500" height="500">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" id="GO">
+        <div class="row featurette" style="padding-left: 100px; padding-right: 100px">
+          <div class="col-lg-12">
+            <h1 class="featurette-heading">FORSTERING INTERESTS</h1>
+          </div>
+          <div class="col-lg-6">
+            <h1>IN GO GAME</h1>
+            <a href="http://www.cdqy.cn/news/840.html" target="_blank">read more about the event -->></a>
+            <p style="margin-top: 10px; ">"Go", which is also know as "Weiqi" in China, has grown popular recent years around the world because of the famous: "game of AlphaGo and Li Sedol“. Before that historical event, no one could ever believe that a machine, and especially a machine that cannot do the math that involves the calculation of the factorial of 361 can beat human beings on the game of Go. The core and the reason of Go being so fascinating is the uncanny, unpredictable and myriads of changes that can happen in a single round of Go. But all that was solved by programmers and technicians, it was really a hard blow on Go fanatics and people's interest in this game. <br>But Go lovers like me would never let others just walk away from this interesting, strategical game. So, by grasping the opportunity of the "National Fitness Day" of the city, we were ready to foster kids interest in Go.</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <img src="Go.png" height="500px">
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="slide" id="DISASTER">
+        <div class="featurette" style="padding-left:100px; padding-right: 50px">
+          <h1 class="featurette-heading">THE DISASTER BROUGHT US TOGETHER</h1>
+          <div style="width:100%; height: 1px; background-image: linear-gradient(to right, transparent, #424242, transparent);"></div>
+          <div class="row">
+            <div class="col-lg-6" style="margin: auto; display:inline-flex;flex-direction: column;align-items: center;-webkit-box-align: center;align-content: center;vertical-align: middle">
+              <p class="lead">Although the World Exposition event may seems to be a little overly commercialized now, back then I was too young to understand what is called advertisement. I remember I dived into the cause of helping students from Wenchuang (the disaster stricken area) to recover from the desperate experience they had undergone. I remember immediately after the earthquake I threw in all the pocket money I had and I had saved into some of the donations. I was only 6 that time, but I can still recall my times with my friends from Wenchuang</p>
+              <a href="https://news.sina.com.cn/c/2010-04-23/070217413802s.shtml" target="_blank" style="margin:auto; margin-left: 0px; padding:0px">view more -->></a>
+              <a href="http://blog.sina.com.cn/s/blog_677f14d60100iupp.html" target="_blank" style="margin:auto; margin-left: 0px; padding:0px">view more -->></a>
+            </div>
+            <div class="col-lg-6">
+              <div>
+                <h2>2008.05.12 EARTHQUAKE</h2>
+                <h2>2008.??.18 DONATION ON XILING</h2>
+                <h2>2010.05.12 WORLD EXPOSITION</h2>
+              </div>
+              <img src="earthquake.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice" width="500" height="500">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section" id="wrapper5">
+      <div class="slide" id="yeartext">
+        <h1 class="featurette-heading" style="font-size: 5em; text-align: center;">Years of devotion in<br> Education</h1>
+      </div>
+
+      <div class="slide" id="ORIGIN">
+        <div class="featurette" style="padding-left: 100px; padding-right: 100px">
+          <div style="text-align: center">
+           <h1 class="featurette-heading">THE ORIGIN OF ALL THE STORIES</h1>
+          </div>
+          <div style="width: 750px; margin:auto">
+            <h2>MY MOTHER USED TO BE A TEACHER AT SWUFE, AND HER TALENT OF BEING A TEACHER IS ONE OF THE DECISIVE REASONS FOR ME TO ACHIEVE WHAT I HAVE. I SEEM TO HAVE PICKED UP THAT TALENT, AND BECAUSE OF THE RIGHT TIMING, I JUMPED INTO THE REALM OF EDUCATION.</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" id="juniorhigh">
+        <div class="row featurette" style="padding-left: 100px; padding-right: 100px">
+          <div class="col-lg-12">
+              <h1 class="featurette-heading">THE BEGINING</h1>
+              <h5 class="font-color-5a5a5a">TEACHING FELLOW CLASSMATES</h5>
+          </div>
+          <div class="col-lg-5">
+            <p style="margin-top: 20px">Because of the Chinese culture of helping others, my teacher always encouraged us  to help others whenever we could. I was doing quite well in 9th grade, but my best friend was having some trouble with his school work, so I tried my best to help him. <br><br>We sneaked out of the classroom every time during nap times, and did some extra-work to help him with his schoolwork (Math, Physics, Chemistry, and English). His grade increased a lot from when we started doing the extra-hour work. After that, one of my teachers discovered talent of teaching, and asked me if I want to tutor some of her classes, and do some extra-hours tutoring with some other students too. And that's the start of my teaching experience.</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="row" style="padding-left: 0px">
+              <img src="begining.png" height="350px">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" id="ENGLISH">
+        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-2">
+                <img src="longzhu-logo.png"  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice" >
+              </div>
+              <div class="col-lg-10">
+                <h1 class="featurette-heading">ENGLISH TEACHING</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <p class="lead" style="margin-top: 60px">It has always been a problem that kids in China always learn English by simply rotting all the words, and cannot even pronounce any of them. So, at first, I decided to teaching them how to pronounce a word well by teaching them the pronunciations of each letter and combination, for instance "ee", "ea" etc..</p>
+            <a href="English-teaching-profile.html">Things I learnt and taught -->></a><br>
+            <a href="English-teaching.html">read the whole story of "Kids, English and Me" -->></a>
+          </div>
+          <div class="col-lg-7">
+            <img src="English1.png" height = "400px" style="margin-left: 0px">
+          </div> 
+        </div>
+      </div>
+
+      <div class="slide" id="MATH">
+        <div class="row featurette" style="padding: 100px; padding-top: 0px; padding-bottom: 0px">
+          <div class="col-lg-12">
+            <h1 class="featurette-heading">MATH TEACHING</h1>
+            <h5>KIDS TEACHING TO CURRICULUM BUILDING</h5>
+            <div style="width:100%; height: 1px; background-image: linear-gradient(to right, transparent, #424242, transparent);"></div>
+            <p style="margin-top:10px">I might know how to study for English tests in Junior highs, but Math is a whole new story. During my junior high period, I started knowing nothing about Math test to a genuine "test taking machine". And I always believe that if I can end up getting an almost perfect Math score in "Zhongkao" using the method I applied in learning Math, I can teach everyone to get the perfect score.</p>
+          </div>
+          <div class="col-lg-5" style="margin-top: 0px; text-align: centers">
+            <img src="math1.png" width="430">
+          </div>
+          <div class="col-lg-7" style="margin-top: 5px">
+            <p class="lead">I started with one-on-one tutoring, and it turns out my method really works. Their score rose from 120 and 110 to 140 in just a week, and one of them actually got a perfect score on one of the mathematics competition while the rest from his school did react 90.<br><br>But that was for students already knowing the basic stuffs, I am know trying to start from the very basic level. So, I started writing a curriculum for starters, which after I finish it, will lead students from no foundation at all to almost perfect score. <br><br>I am still teaching the first batch of the students, hope they will make it to the top.</p>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section" id="wrapper6">
+      <h1 class="font-color-e1e1e1" style="font-size: 50px; text-align: center">Contact Me at:</h1>
+      <h1 class="font-color-e1e1e1" style="font-size: 50px; text-align: center; font-weight: bold">Bill-Yunjie-Zhang@outlook.com</h1>
+      <div style="text-align: center">
+        <a href="https://github.com/Bill-Yunjie-Zhang" class="font-color-e1e1e1" style="font-size: 25px; text-align: center" target="_blank">visit my github -->></a>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="node_modules/fullpage.js/vendors/easings.min.js"></script>
+  <script type="text/javascript" src="node_modules/fullpage.js/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="node_modules/fullpage.js/dist/fullpage.extensions.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
