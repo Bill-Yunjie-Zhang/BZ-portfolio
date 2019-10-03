@@ -18,9 +18,16 @@ new fullpage('#fullpage', {
     sectionSelector: '.section',
     slideSelector: '.slide',
     verticalCentered: true,
-});
+}); 
 
-if(window.location.href==="http://127.0.0.1:5501/portfolio.html"){
+const overlay = document.getElementById('overlay-msg');
+const close = document.getElementById('close-popup');
+const form = document.getElementById('news-popup');
+ 
+const closePopup = () => {
+    overlay.style.display = "none";
+    overlay.style.opacity = 0;
+    form.style.opacity = 0;
     setTimeout(function(){
         $("#mapTrailer").append($("<h2 style='font-family: Arial, Helvetica, sans-serif'>use the map to select where you wanna go! <img src='rightward.svg' height='50px' style='margin-left: 20px'><br>or</h2><h2 style='font-family: Arial, Helvetica, sans-serif'>scroll down <img class='f' src='downward.svg' height='40px'> or right <img class='f' src='rightward.svg' height='52px'> to browse</h2>"));
         $('#map').addClass('animate-flicker')
@@ -32,7 +39,60 @@ if(window.location.href==="http://127.0.0.1:5501/portfolio.html"){
     setTimeout(function(){
         $('#mapTrailer').find('h2').remove();
     }, 12000)
+};
+ 
+const showClose = () => {
+    close.style.display = "block";
+    close.style.opacity = 1;
+};
+
+const typeWriter = function(txt, id, speed) {
+    setTimeout(function(){
+        document.getElementById(id).innerHTML += txt[0]
+        txt = txt.slice(1, txt.length)
+        if(txt.length > 0){
+            typeWriter(txt, id, speed)
+        }
+    }, speed);
 }
+
+const showOverlay = () => {
+    overlay.style.display = "flex";
+    overlay.style.opacity = 1;
+    form.style.opacity = 1;
+    $('#popup-text').append($('<h2 id = "popup-text-h" style="text-align: center"></h2>'))
+    let txt = 'Welcome to my portfolio!'
+    let id = 'popup-text-h'
+    let speed = 10
+    typeWriter(txt, id, speed)
+    setTimeout(function(){
+        $('#popup-text').append($('<div style="width:100%; height: 1px; background-image: linear-gradient(to right, transparent, #e0e0e0, transparent); margin-bottom: 20px"></div>'))
+        $('#popup-text').append($('<p id="popup-text-p1"></p>'))
+        $('#popup-text').append($('<p id="popup-text-p2" style="font-size:20px"></p>'))
+        $('#popup-text').append($('<p id="popup-text-p3" style="font-size:8px; margin-top:20px; float: right"></p>'))
+    }, 500)
+    setTimeout(function(){
+        txt = 'This website is for giving some basic info of my projects and activities. I built this web-portfolio to showcase some of the skills I have in coding. (This website is 99% hand-written) To view this code or other projects I have done, you can visit my Github at the last page of this website. The process of building this website is in 2 repositories: "portfolio2"(which I messed up near the end) and "portfolio3".'
+        id = "popup-text-p1"
+        speed = 40
+        typeWriter(txt, id, speed)
+    }, 2000)
+    setTimeout(function(){
+        txt = 'Special thanks to Jimmy, Gio, Kun and Mo. (Order is irrelevant)'
+        id = "popup-text-p2"
+        speed = 20
+        typeWriter(txt, id, speed)
+    }, 22000)
+    setTimeout(function(){
+        txt = 'Hit on the closing botton to begin!'
+        id = "popup-text-p3"
+        speed = 10
+        typeWriter(txt, id, speed)
+        setTimeout(showClose, 2000)
+    }, 24000)
+};
+ 
+setTimeout(showOverlay, 4000);
 
 $("#map1").hover(
     function(){

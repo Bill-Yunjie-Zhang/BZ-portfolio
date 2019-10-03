@@ -180,3 +180,53 @@ body > .dg {
 	 -o-animation: flickerAnimation 1s infinite;
 	  animation: flickerAnimation 1s infinite;
 }
+
+#overlay-msg,
+#news-popup,
+#close-popup {
+    opacity: 0;
+    transition: 10s linear;
+    -webkit-transition: 10s linear;
+    -o-transition: 10s linear;
+    -moz-transition: 10s linear;
+}
+ 
+#overlay-msg {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(49, 49, 49, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -o-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+}
+ 
+#news-popup {
+    position: relative;
+    margin: auto;
+    background-color: #5a5a5a;
+    color: black;
+    border-top: solid #292929 2rem;
+    border-bottom: solid #292929 0.5rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px black;
+}
+ 
+#news-popup > div {
+    margin: auto;
+    padding: 1rem 1.5rem 0 1.5rem;
+}
+ 
+#close-popup {
+    display: none;
+    position: absolute;
+    top: -2rem;
+    right: 0px;
+    border: none;
+    background-color: transparent;
+    padding: 0.3rem 0.5rem;
+}
