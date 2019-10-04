@@ -5,8 +5,8 @@ new fullpage('#fullpage', {
     fadingEffect: true,
     scrollOverflow: true,
 
-	anchors:['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
-    navigationTooltips: ['Bill Zhang', 'Team Player & Leader', 'Intern At Zhxi', 'To My Community', 'Devotion in Education', 'Contact'],
+	anchors:['About-Me', 'Team-Player-And-Leader', 'Intern-At-ZhongXi', 'To-My-Community', 'Devotion-in-Education', 'Contact'],
+    navigationTooltips: ['About Me', 'Team Player & Leader', 'Intern At ZhongXi', 'To My Community', 'Devotion in Education', 'Contact'],
     css3: true,
 	navigation: true,
     slidesNavigation: true,
@@ -20,25 +20,30 @@ new fullpage('#fullpage', {
     verticalCentered: true,
 }); 
 
-const overlay = document.getElementById('overlay-msg');
+const overlay = document.getElementById('overlay-intro');
 const close = document.getElementById('close-popup');
-const form = document.getElementById('news-popup');
- 
-const closePopup = () => {
-    overlay.style.display = "none";
-    overlay.style.opacity = 0;
-    form.style.opacity = 0;
+const intro = document.getElementById('popup-intro');
+
+const guide =  () => {
     setTimeout(function(){
+        $('#anchorTrailer').append($("<p style='font-family: Arial, Helvetica, sans-serif'>this menu here can give you a rough idea what each section is about</p><img class='f' src='downward.svg' height='40px'>"));
         $("#mapTrailer").append($("<h2 style='font-family: Arial, Helvetica, sans-serif'>use the map to select where you wanna go! <img src='rightward.svg' height='50px' style='margin-left: 20px'><br>or</h2><h2 style='font-family: Arial, Helvetica, sans-serif'>scroll down <img class='f' src='downward.svg' height='40px'> or right <img class='f' src='rightward.svg' height='52px'> to browse</h2>"));
         $('#map').addClass('animate-flicker')
         $('#mapTrailer .f').addClass('animate-flicker')
-    }, 1500)
+    }, 500)
     setTimeout(function(){
-        $('#map').removeClass('animate-flicker')
-    }, 9000);
-    setTimeout(function(){
+        $('#map').removeClass('animate-flicker');
         $('#mapTrailer').find('h2').remove();
-    }, 12000)
+        $('#anchorTrailer').find('p').remove();
+        $('#anchorTrailer').find('img').remove();
+    }, 8000);
+}
+
+const closePopup = () => {
+    overlay.style.display = "none";
+    overlay.style.opacity = 0;
+    intro.style.opacity = 0;
+    guide()
 };
  
 const showClose = () => {
@@ -57,24 +62,24 @@ const typeWriter = function(txt, id, speed) {
 }
 
 const showOverlay = () => {
-    overlay.style.display = "flex";
-    overlay.style.opacity = 1;
-    form.style.opacity = 1;
+    overlay.classList.add('active')
+
     $('#popup-text').append($('<h2 id = "popup-text-h" style="text-align: center"></h2>'))
     let txt = 'Welcome to my portfolio!'
     let id = 'popup-text-h'
     let speed = 10
     typeWriter(txt, id, speed)
     setTimeout(function(){
+        showClose()
         $('#popup-text').append($('<div style="width:100%; height: 1px; background-image: linear-gradient(to right, transparent, #e0e0e0, transparent); margin-bottom: 20px"></div>'))
         $('#popup-text').append($('<p id="popup-text-p1"></p>'))
         $('#popup-text').append($('<p id="popup-text-p2" style="font-size:20px"></p>'))
         $('#popup-text').append($('<p id="popup-text-p3" style="font-size:8px; margin-top:20px; float: right"></p>'))
     }, 500)
     setTimeout(function(){
-        txt = 'This website is for giving some basic info of my projects and activities. I built this web-portfolio to showcase some of the skills I have in coding. (This website is 99% hand-written) To view this code or other projects I have done, you can visit my Github at the last page of this website. The process of building this website is in 2 repositories: "portfolio2"(which I messed up near the end) and "portfolio3".'
+        txt = 'I built this web-portfolio to give some basic info of my projects and activities and to showcase some of the skills I have in coding. (99% of the code of this website is written by myself) To view this code or other projects I have done, you can visit my Github at the final page of this website. The process of building this version of web-portfolio is in 2 repositories: "portfolio2"(which I messed up near the end) and "portfolio3".'
         id = "popup-text-p1"
-        speed = 40
+        speed = 30
         typeWriter(txt, id, speed)
     }, 2000)
     setTimeout(function(){
@@ -82,20 +87,20 @@ const showOverlay = () => {
         id = "popup-text-p2"
         speed = 20
         typeWriter(txt, id, speed)
-    }, 22000)
+    }, 19000)
     setTimeout(function(){
         txt = 'Hit on the closing botton to begin!'
         id = "popup-text-p3"
         speed = 10
         typeWriter(txt, id, speed)
-        setTimeout(showClose, 2000)
-    }, 24000)
+    }, 21000)
 };
  
-setTimeout(showOverlay, 4000);
+setTimeout(showOverlay, 3000);
 
 $("#map1").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='1-1.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -104,6 +109,7 @@ $("#map1").hover(
 )
 $("#map2").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='2-1.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -112,6 +118,7 @@ $("#map2").hover(
 )
 $("#map2-1").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='2-2.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -120,6 +127,7 @@ $("#map2-1").hover(
 )
 $("#map2-2").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='2-3.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -128,6 +136,7 @@ $("#map2-2").hover(
 )
 $("#map2-3").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='2-4.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -136,6 +145,7 @@ $("#map2-3").hover(
 )
 $("#map2-4").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='2-5.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -144,6 +154,7 @@ $("#map2-4").hover(
 )
 $("#map3").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='3-1.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -152,6 +163,7 @@ $("#map3").hover(
 )
 $("#map3-1").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='3-2.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -160,6 +172,7 @@ $("#map3-1").hover(
 )
 $("#map3-2").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='3-3.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -168,6 +181,7 @@ $("#map3-2").hover(
 )
 $("#map3-3").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='3-4.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -176,6 +190,7 @@ $("#map3-3").hover(
 )
 $("#map3-4").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='3-5.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -184,6 +199,7 @@ $("#map3-4").hover(
 )
 $("#map3-5").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='3-6.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -192,6 +208,7 @@ $("#map3-5").hover(
 )
 $("#map3-6").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='3-7.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -200,6 +217,7 @@ $("#map3-6").hover(
 )
 $("#map4").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='4-1.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -208,6 +226,7 @@ $("#map4").hover(
 )
 $("#map4-1").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='4-4.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -216,6 +235,7 @@ $("#map4-1").hover(
 )
 $("#map4-2").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='4-3.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -224,6 +244,7 @@ $("#map4-2").hover(
 )
 $("#map4-3").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='4-2.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -232,6 +253,7 @@ $("#map4-3").hover(
 )
 $("#map4-4").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='4-5.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -240,6 +262,7 @@ $("#map4-4").hover(
 )
 $("#map5").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='5-1.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -248,6 +271,7 @@ $("#map5").hover(
 )
 $("#map5-1").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='5-2.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -256,6 +280,7 @@ $("#map5-1").hover(
 )
 $("#map5-2").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='5-3.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -264,6 +289,7 @@ $("#map5-2").hover(
 )
 $("#map5-3").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='5-4.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -272,6 +298,7 @@ $("#map5-3").hover(
 )
 $("#map5-4").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='5-5.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){
@@ -280,6 +307,7 @@ $("#map5-4").hover(
 )
 $("#map6").hover(
     function(){
+        $('#map').removeClass('animate-flicker')
         $("#mapTrailer").find("h2").remove();
         $("#mapTrailer").append($("<img src='6-1.jpg' height='150' style='opacity: 0.9'>"));
     }, function(){

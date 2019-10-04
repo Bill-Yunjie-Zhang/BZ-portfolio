@@ -1,7 +1,3 @@
-.color-292929{
-	background-color: #292929
-}
-
 .color-841518{
 	background-color: #841518
 }
@@ -99,23 +95,19 @@ h1{
 	font-size: 60px
 }
 
-.noPadding{
-	padding: 0px
-}
-
-#marketing{
-	transform: rotate(90deg)
-}
-
-
 .padding{
 	padding:40px
 }
 
-.menu-link:active{
-	background-color: #7b7b7b
+.fp-controlArrow.fp-next:hover,
+.fp-controlArrow.fp-prev:hover{
+    border-bottom: 6px solid;
+    border-left: 6px solid;
+    top: 48%;
+    transition: all 0.5s
 }
 
+/*for the map*/
 .minimap {
 	opacity: 0.3;
 	float: left;
@@ -124,17 +116,13 @@ h1{
 
 .minimap:hover {
 	opacity: 1;
+	transition: opacity 1s
 }
 
-.map1-h {
-	color: #e1e1e1
-}
-
-
-
+/*for whole page slider*/
 html,
 body {
-  background-color: black;
+  background-color: #292929;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -153,7 +141,7 @@ body > .dg {
   }
 }
 
-
+/*for the flickering animation*/
 @keyframes flickerAnimation {
 	0%   { opacity:1; }
 	50%  { opacity:0; }
@@ -181,31 +169,32 @@ body > .dg {
 	  animation: flickerAnimation 1s infinite;
 }
 
-#overlay-msg,
-#news-popup,
-#close-popup {
-    opacity: 0;
-    transition: 10s linear;
-    -webkit-transition: 10s linear;
-    -o-transition: 10s linear;
-    -moz-transition: 10s linear;
-}
- 
-#overlay-msg {
-    display: none;
+/*for the overlay*/
+#overlay-intro {
+	opacity: 0;
+    display: flex;
     position: fixed;
-    z-index: 3;
+    z-index: 33;
     top:0;
     height: 100%;
     width: 100%;
-    background-color: rgba(49, 49, 49, 0.8);
+    background-color: rgba(34, 34, 34, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     -o-backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
+	-moz-backdrop-filter: blur(10px);
+	transition: all 1s
 }
  
-#news-popup {
+#overlay-intro.active {
+	opacity: 1;
+	display: flex;
+	transition: all 1s
+
+}
+
+#popup-intro {
+	opacity: 0;
     position: relative;
     margin: auto;
     background-color: #5a5a5a;
@@ -213,10 +202,17 @@ body > .dg {
     border-top: solid #292929 2rem;
     border-bottom: solid #292929 0.5rem;
     border-radius: 5px;
-    box-shadow: 2px 2px 6px black;
+	box-shadow: 2px 2px 6px black;
+	transition: all 1s
 }
  
-#news-popup > div {
+#overlay-intro.active #popup-intro {
+	opacity: 1;
+	transition: all 1s
+
+}
+
+#popup-intro > div {
     margin: auto;
     padding: 1rem 1.5rem 0 1.5rem;
 }
