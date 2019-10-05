@@ -110,6 +110,42 @@ $("#map1").hover(
         $("#mapTrailer").find("img").remove();
     }
 )
+$("#map1-1").hover(
+    function(){
+        $('#map').removeClass('animate-flicker')
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='1-2.jpg' height='150' style='opacity: 0.9'>"));
+    }, function(){
+        $("#mapTrailer").find("img").remove();
+    }
+)
+$("#map1-2").hover(
+    function(){
+        $('#map').removeClass('animate-flicker')
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='1-3.jpg' height='150' style='opacity: 0.9'>"));
+    }, function(){
+        $("#mapTrailer").find("img").remove();
+    }
+)
+$("#map1-3").hover(
+    function(){
+        $('#map').removeClass('animate-flicker')
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='1-4.jpg' height='150' style='opacity: 0.9'>"));
+    }, function(){
+        $("#mapTrailer").find("img").remove();
+    }
+)
+$("#map1-4").hover(
+    function(){
+        $('#map').removeClass('animate-flicker')
+        $("#mapTrailer").find("h2").remove();
+        $("#mapTrailer").append($("<img src='1-5.jpg' height='150' style='opacity: 0.9'>"));
+    }, function(){
+        $("#mapTrailer").find("img").remove();
+    }
+)
 $("#map2").hover(
     function(){
         $('#map').removeClass('animate-flicker')

@@ -193,7 +193,7 @@ body > .dg {
 #overlay-intro.active {
 	opacity: 1;
 	display: flex;
-	transition: all 1s
+	transition: all 1.5s
 
 }
 
