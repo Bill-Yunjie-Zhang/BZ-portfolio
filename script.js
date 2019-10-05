@@ -82,24 +82,24 @@ const showOverlay = () => {
     setTimeout(function(){
         txt = 'I built this web-portfolio to give some basic info of my projects and activities and to showcase some of the skills I have in coding. (99% of the code of this website is written by myself) To view this code or other projects I have done, you can visit my Github at the final page of this website. The process of building this version of web-portfolio is in 2 repositories: "portfolio2"(which I messed up near the end) and "portfolio3".'
         id = "popup-text-p1"
-        speed = 30
+        speed = 20
         typeWriter(txt, id, speed)
     }, 2000)
     setTimeout(function(){
         txt = 'Special thanks to Jimmy, Gio, Kun and Mo. (Order is irrelevant)'
         id = "popup-text-p2"
-        speed = 20
+        speed = 10
         typeWriter(txt, id, speed)
-    }, 19000)
+    }, 13000)
     setTimeout(function(){
         txt = 'Hit on the closing botton to begin!'
         id = "popup-text-p3"
-        speed = 10
+        speed = 5
         typeWriter(txt, id, speed)
-    }, 21000)
+    }, 15000)
 };
  
-setTimeout(showOverlay, 3000);
+setTimeout(showOverlay, 1000);
 
 $("#map1").hover(
     function(){
