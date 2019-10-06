@@ -28,15 +28,15 @@
 </head>
 <body>
   <div id="overlay-intro" class="float-middle">
-    <div id="popup-intro" class="float-middle" style="height:400px; width:600px">
+    <div id="popup-intro" class="float-middle">
       <div>
-        <button id="close-popup" type="button" onclick="closePopup()" style="color:#e0e0e0"> X </button>
-        <div id="popup-text" style="color:#e0e0e0"></div>
+        <button id="close-popup" type="button" onclick="closePopup()"> X </button>
+        <div id="popup-text"></div>
       </div>
     </div>
   </div>
 
-  <div id="map" style="position: absolute; right:0px; height:100px; width:209px; background-color: transparent; z-index: 9; margin:0px;">
+  <div id="map">
     <a id="map1" href="#About-Me"><img class='minimap' src="1-1.jpg"></a>
     <a id="map1-1" href="#About-Me/What-I-Love"><img class='minimap' src="1-2.jpg"></a>
     <a id="map1-2" href="#About-Me/Sports"><img class='minimap' src="1-3.jpg"></a>
@@ -81,14 +81,15 @@
     <a href="#"><img class='minimap' src="empty.png"></a>
   </div>
 
-  <div id="mapTrailer" style="position: absolute; right:250px; top:10px; background-color: transparent; z-index: 9; margin:0px; text-align:center; color: rgb(83,83,83);"></div>
+  <div id="trailers">
+    <div id="mapTrailer" class="trailers"></div>
+    <div id="anchorTrailer" class="trailers"></div>
+    <div id="anchorTrailerh" class="row trailers"></div>
+  </div>
 
-  <div id="anchorTrailer" style="position: absolute; left: 10px; top: 20%; background-color: transparent; z-index: 9; color: rgb(83,83,83); width:180px"></div>
-
-  <div id="anchorTrailerh" class="row" style="position:absolute; left:20%; bottom:5px; background-color: transparent; z-index:9; color: rgb(83,83,83); width:300px;"></div>
   <div id="fullpage">
     <div class="section" id="wrapper1">
-      <div class="slide" data-anchor="Home" style="padding:0px!; margin: 0px!">
+      <div class="slide" data-anchor="Home">
         <div id="particle-slider">
           <div class="pslides">
             <div id="first-slide" class="pslide" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAACECAMAAABfy78/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA0ppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzVDQzU4MEREQUFEMTFFOUE4MEZERjAxQjBDMDkwOTgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzVDQzU4MENEQUFEMTFFOUE4MEZERjAxQjBDMDkwOTgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo5YTVlYjVjOC05YTE3LWM5NDAtOGNiZi0wY2UzZDc0MDhmODIiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo5YTVlYjVjOC05YTE3LWM5NDAtOGNiZi0wY2UzZDc0MDhmODIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+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"></div>
@@ -113,11 +114,11 @@
     
     <div class="section" id="wrapper2">
       <div class="slide fp-viewing-Team-Player-And-Leader-0" id="teamleader">
-        <h1 class="featurette-heading" style="font-size: 5em; text-align: center">Team Player &amp; Leader</h1>
+        <h1 class="featurette-heading titles">Team Player &amp; Leader</h1>
       </div>
 
       <div class="slide fp-viewing-Team-Player-And-Leader-1" data-anchor="Geekton" id="Geekton">
-        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+        <div class="row featurette">
           <div class="col-lg-12">
             <h1 class="featurette-heading">GEEKTON</h1>
             <h5 class="font-color-5a5a5a">CO-FOUNDER</h5>
@@ -141,7 +142,7 @@
       </div>
 
       <div class="slide fp-viewing-Team-Player-And-Leader-2" data-anchor="CATE" id="CATE">
-        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+        <div class="row featurette">
           <div class="col-lg-5">
             <ol style="font-size: 25px">
               <li>Found it very hard to find what I like around campus</li>
@@ -169,7 +170,7 @@
       </div>  
 
       <div class="slide fp-viewing-Team-Player-And-Leader-3" data-anchor="SAC" id="SAC">
-        <div class="row featurette" style="padding-left:100px; padding-right: 100px"> 
+        <div class="row featurette"> 
           <div class="col-lg-7">
             <div class="row">
               <div class="col-lg-4">
@@ -192,11 +193,12 @@
       </div>
 
       <div class="slide fp-viewing-Team-Player-And-Leader-4" data-anchor="CDDC" id="CDDC">
-        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+        <div class="row featurette">
           <div class="col-lg-7">
             <h1 class="featurette-heading">C.D.D.C.</h1>
             <h5 class="font-color-5a5a5a">CO-FOUNDER</h5>
-            <p class="lead" style="margin-top: 50px">C.D.D.C. stands for ChengDu Diving Club. I have tried snorkeling but never diving, which I would love to try when I have the chance. The other two founders of the C.D.D.C. are both experienced scuba divers, and I am in charge of technical-support, like website-building and WeChat subscription account managing.</p>
+            <div style="width:100%; height: 1px; background-image: linear-gradient(to right, transparent, #424242, transparent);"></div>
+            <p style="margin-top: 50px">C.D.D.C. stands for ChengDu Diving Club. I have tried snorkeling but never diving, which I would love to try when I have the chance. The other two founders of the C.D.D.C. are both experienced scuba divers, and I am in charge of technical-support, like website-building and WeChat subscription account managing.</p>
             <p style="margin-top: 50px; font-size: 10px">P.s. the logo to the right is designed and made by me.</p>
           </div>
           <div class="col-lg-5">
@@ -209,15 +211,15 @@
 
     <div class="section" id="wrapper3">
       <div class="slide" id="internText">
-        <h1 class="featurette-heading" style="font-size: 5em; text-align: center">Intern at <a href="https://www.linkedin.com/school/zhxi/" style="color:#e0e0e0" target="_blank">ZhongXi</a></h1>
+        <h1 class="featurette-heading titles">Intern at <a href="https://www.linkedin.com/school/zhxi/" style="color:#e0e0e0" target="_blank">ZhongXi</a></h1>
       </div>
 
       <div class="slide" data-anchor="BAINIAN" id="BAINIAN">
-        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+        <div class="row featurette">
           <div class="col-lg-5">
             <h1 class="featurette-heading">ANZ &amp; ZHXI</h1>
             <h1 class="featurette-heading">AT BAINIAN</h1>
-            <h5 class="lead font-color-d1b0b2">VOLUNTEER AND TA</h5>
+            <h5>VOLUNTEER AND TA</h5>
             <div style="width:100%; height: 1px; background-image: linear-gradient(to right, transparent, #e0e0e0, transparent);"></div>
             <p style="margin-top: 20px; font-size:20px">A 6 days volunteering and TAing at BN Vocational School (from June 24th to 29) was very rewarding. It was a great opportunity to get to know students who's backgrounds were very different from us and be friends with them and the kind of lives we never had. "We let you know what's coding like, you let us know what's  life like."</p>
           </div>
@@ -228,17 +230,17 @@
       </div>
 
       <div class="slide" data-anchor="LEMAN" id="LEMAN">
-        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+        <div class="row featurette">
           <div class="col-lg-12">
             <h1 class="featurette-heading">LEMAN</h1>
-            <h5 class="lead font-color-d1b0b2">TUTOR & CURRICULUM BUILDING</h5>
+            <h5>TUTOR & CURRICULUM BUILDING</h5>
             <div style="width:100%; height: 1px; background-image: linear-gradient(to right, transparent, #d1b0b2, transparent);"></div>
             <p style="margin-top: 10px">I have never taught kids this young before. It was a disaster at first, but because of the patient tutoring and guiding by Landon (who is a great teacher for kindergarten kids) and my constant trying, I gradually got better. And by the end of my time with them, I was really into teaching them.</p>
           </div>
           <div class="col-lg-6" style="margin-bottom:20px">
             <img src="Leman1.jpg" height="400">
           </div> 
-          <div class="col-lg-6" style="margin: auto; display:inline-flex;flex-direction: column;align-items: center;-webkit-box-align: center;align-content: center;vertical-align: middle">
+          <div class="col-lg-6 align-middle">
             <h1 style="font-size: 30px; text-align: center">What I learnt while my days in Leman: <br>(Order is irrelevant)</h1>
             <ul style="width: 600px; margin: auto; font-size: 20px">
                 <li>Always prepare more than expected to teach.</li>
@@ -252,10 +254,10 @@
       </div>
 
       <div class="slide" data-anchor="BOOTCAMPS" id="BOOTCAMPS">
-        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+        <div class="row featurette">
           <div class="col-lg-7">
             <h1 class="featurette-heading">BOOTCAMPS</h1>
-            <h5 class="lead font-color-d1b0b2">TEACHER'S ASSISTANT</h5>
+            <h5>TEACHER'S ASSISTANT</h5>
             <div style="width:100%; height: 1px; background-image: linear-gradient(to right, transparent, #e0e0e0, transparent);"></div>
             <p style="margin-top: 25px">I always love the job of TAing, and I have done a lot of them. Guiding and exploring with other students through their hard times, really make me feel great, especially when we both devote into a job that really pushes our brain to the edge. I think the reason why I prefer TAing than teaching is that I don't really want to be seem as above someone, I want to be part of their team and struggle other. The other reason I love to TA through classes is that I can really learn something new every time I go through the course. </p>
           </div>
@@ -266,21 +268,21 @@
       </div>
 
       <div class="slide" data-anchor="Intern" id="Intern">
-          <div class="row featurette" style="padding: 100px; padding-top: 0px; padding-bottom:200px">
+          <div class="row featurette" style="padding-top: 0px; padding-bottom:200px">
           <div class="col-lg-5">
             <img src="Marketing1.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice" width="500" height="1500">
           </div> 
           <div class="col-lg-7">
             <h1 class="featurette-heading">BEING PART OF ZHXI</h1>
-            <h5 class="lead font-color-d1b0b2">DOING ALL SORTS OF THINGS</h5>
+            <h5>DOING ALL SORTS OF THINGS</h5>
             <img src="theLine.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice"   alt="the line">
           </div>
         </div>
       </div>
 
       <div class="slide" data-anchor="CoHack" id="CoHack">
-        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
-          <div class="col-lg-6" style="margin: auto; display:inline-flex;flex-direction: column;align-items: center;-webkit-box-align: center;align-content: center;vertical-align: middle">
+        <div class="row featurette">
+          <div class="col-lg-6 align-middle">
             <p>At first, I was so excited to be among all those great people attending CoHack, but on the other hand I also felt a bit struck by how little I know about the programming world. I was afraid to even to talk to the ones around me. For the first few month I listen to what others are talking about and learn, and I learnt a lot by listening what others and talking about and search it afterwards on the internet. Later as I gradually pulled myself together and I started talking to all these interesting people, and the ideas and knowledges they pass to me, really benefit me a lot.</p>
             <div class="row">
               <div class="col-lg-6">
@@ -310,12 +312,12 @@
 
     <div class="section" id="wrapper4">
       <div class="slide" id="givetext">
-        <h1 class="featurette-heading" style="font-size: 5em; text-align: center;">Giving back to</h1>
-  			<h1 class="featurette-heading" style="font-size: 5em; text-align: center;">My Community</h1>
+        <h1 class="featurette-heading titles">Giving back to</h1>
+  			<h1 class="featurette-heading titles">My Community</h1>
       </div>
 
       <div class="slide" data-anchor="GO" id="GO">
-        <div class="row featurette" style="padding-left: 100px; padding-right: 100px">
+        <div class="row featurette">
           <div class="col-lg-12">
             <h1 class="featurette-heading">FORSTERING INTERESTS</h1>
           </div>
@@ -333,12 +335,12 @@
       </div>
 
       <div class="slide" data-anchor="WEEKLY-PLAN" id="WEEKLY">
-        <div class="featurette">
+        <div class="featurette" style="padding-left: 0px; padding-right: 0px">
           <img src="weekly.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice" width="100%">
-          <div class="row padding" style="margin-left: 0px; margin-right: 0px">
+          <div class="row" style="margin-left: 0px; margin-right: 0px; padding:40px">
             <div class="col-lg-7">
               <h1 class="featurette-heading">WEEKLY SCHEDULE</h1>
-              <p class="lead" style="margin-top: 20px">Because of the recent flourish of bicycle sharing system, shared bikes are everywhere. Although it is convenient to be able to get on a bike wherever we are, but it can really be a problem if they are not nicely "taken care of". Some people park the bikes where they are not supposed to park, blocking bike lanes and side walks; there are also others who are so hurry to get to their destiny that they don't even care whether the bikes are parked nicely or just rowed to there sides.<br><br> One day a friend and I accidentally fall into this topic, after much thought and planning, we decided that maybe we should do something about it. So we agreed to schedule two hours on Sunday afternoons to do something for the community. Most of the time we help with arranging the shared bikes, we also clean hallways once every month. <br><br> The schedule not only remind myself of thinking twice what "a little convenience for one can be hard works" for others, it also benefits everyone who is living in the community, by having a clean and tidy environment. </p>
+              <p style="margin-top: 20px">Because of the recent flourish of bicycle sharing system, shared bikes are everywhere. Although it is convenient to be able to get on a bike wherever we are, but it can really be a problem if they are not nicely "taken care of". Some people park the bikes where they are not supposed to park, blocking bike lanes and side walks; there are also others who are so hurry to get to their destiny that they don't even care whether the bikes are parked nicely or just rowed to there sides.<br><br> One day a friend and I accidentally fall into this topic, after much thought and planning, we decided that maybe we should do something about it. So we agreed to schedule two hours on Sunday afternoons to do something for the community. Most of the time we help with arranging the shared bikes, we also clean hallways once every month. <br><br> The schedule not only remind myself of thinking twice what "a little convenience for one can be hard works" for others, it also benefits everyone who is living in the community, by having a clean and tidy environment. </p>
             </div>
             <div class="col-lg-5">
               <img src="Community2.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice" width="500" height="500">
@@ -348,12 +350,12 @@
       </div>
 
       <div class="slide" data-anchor="PREP-TALKS" id="prep">
-        <div class="featurette">
+        <div class="featurette" style="padding-left: 0px; padding-right: 0px">
           <img src="prep.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice" width="100%">
-          <div class="row padding" style="margin-left: 0px; margin-right: 0px">
+          <div class="row" style="margin-left: 0px; margin-right: 0px; padding:40px">
             <div class="col-lg-7">
               <h1 class="featurette-heading">PREP TALKS</h1>
-              <p class="lead" style="margin-top: 20px">Before the Zhongkao, which is the test Chinese students take to get to senior high schools,  I never thought I would be able to get to the school I am in right now, but it was my dream. However, the truth was that, I never even for once got into the top 100 list of my school before 9th grade. At the end of 8th grade, I had a really nice talk with a former basketball teammate, who got an unbelievable score on the test, and like me, he was not good at taking tests. He made me realize that I should never blame others or the educational system, which I always think was useless and unfair, for not getting good grades in school. We can really make a difference if when accept that hard work will off. And it seemed it really did, and I really believe he changed the course of my life. And I really others to have that chance, have the chance to meet someone who will help them get out of blank bewilderment when facing hurdles in life especially on critical moments like this. And thanks to my former head teacher Mrs. He and English teacher Mr. Long, I began sharing my own experience and studying tricks with junior high school students hoping to make a difference to their lives.</p>
+              <p style="margin-top: 20px">Before the Zhongkao, which is the test Chinese students take to get to senior high schools,  I never thought I would be able to get to the school I am in right now, but it was my dream. However, the truth was that, I never even for once got into the top 100 list of my school before 9th grade. At the end of 8th grade, I had a really nice talk with a former basketball teammate, who got an unbelievable score on the test, and like me, he was not good at taking tests. He made me realize that I should never blame others or the educational system, which I always think was useless and unfair, for not getting good grades in school. We can really make a difference if when accept that hard work will off. And it seemed it really did, and I really believe he changed the course of my life. And I really others to have that chance, have the chance to meet someone who will help them get out of blank bewilderment when facing hurdles in life especially on critical moments like this. And thanks to my former head teacher Mrs. He and English teacher Mr. Long, I began sharing my own experience and studying tricks with junior high school students hoping to make a difference to their lives.</p>
             </div>
             <div class="col-lg-5">
               <img src="prep1.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" preserveAspectRatio="xMidYMid slice" width="500" height="500">
@@ -363,12 +365,12 @@
       </div>
 
       <div class="slide" data-anchor="DISASTER" id="DISASTER">
-        <div class="featurette" style="padding-left:100px; padding-right: 50px">
+        <div class="featurette" style="padding-right: 50px">
           <h1 class="featurette-heading">THE DISASTER BROUGHT US TOGETHER</h1>
           <div style="width:100%; height: 1px; background-image: linear-gradient(to right, transparent, #424242, transparent);"></div>
           <div class="row">
-            <div class="col-lg-6" style="margin: auto; display:inline-flex;flex-direction: column;align-items: center;-webkit-box-align: center;align-content: center;vertical-align: middle">
-              <p class="lead">Although the World Exposition event may seems to be a little overly commercialized now, back then I was too young to understand what is called advertisement. I remember I dived into the cause of helping students from Wenchuang (the disaster stricken area) to recover from the desperate experience they had undergone. I remember immediately after the earthquake I threw in all the pocket money I had and I had saved into some of the donations. I was only 6 that time, but I can still recall my times with my friends from Wenchuang</p>
+            <div class="col-lg-6 align-middle">
+              <p>Although the World Exposition event may seems to be a little overly commercialized now, back then I was too young to understand what is called advertisement. I remember I dived into the cause of helping students from Wenchuang (the disaster stricken area) to recover from the desperate experience they had undergone. I remember immediately after the earthquake I threw in all the pocket money I had and I had saved into some of the donations. I was only 6 that time, but I can still recall my times with my friends from Wenchuang</p>
               <a href="https://news.sina.com.cn/c/2010-04-23/070217413802s.shtml" target="_blank" style="margin:auto; margin-left: 0px; padding:0px">view more -->></a>
               <a href="http://blog.sina.com.cn/s/blog_677f14d60100iupp.html" target="_blank" style="margin:auto; margin-left: 0px; padding:0px">view more -->></a>
             </div>
@@ -388,11 +390,11 @@
 
     <div class="section" id="wrapper5">
       <div class="slide" id="yeartext">
-        <h1 class="featurette-heading" style="font-size: 5em; text-align: center;">Years of devotion in<br> Education</h1>
+        <h1 class="featurette-heading titles">Years of devotion in<br> Education</h1>
       </div>
 
       <div class="slide" data-anchor="ORIGIN" id="ORIGIN">
-        <div class="featurette" style="padding-left: 100px; padding-right: 100px">
+        <div class="featurette">
           <div style="text-align: center">
            <h1 class="featurette-heading">THE ORIGIN OF ALL THE STORIES</h1>
           </div>
@@ -403,10 +405,10 @@
       </div>
 
       <div class="slide" data-anchor="juniorhigh" id="juniorhigh">
-        <div class="row featurette" style="padding-left: 100px; padding-right: 100px">
+        <div class="row featurette">
           <div class="col-lg-12">
               <h1 class="featurette-heading">THE BEGINING</h1>
-              <h5 class="font-color-5a5a5a">TEACHING FELLOW CLASSMATES</h5>
+              <h5>TEACHING FELLOW CLASSMATES</h5>
           </div>
           <div class="col-lg-5">
             <p style="margin-top: 20px">Because of the Chinese culture of helping others, my teacher always encouraged us  to help others whenever we could. I was doing quite well in 9th grade, but my best friend was having some trouble with his school work, so I tried my best to help him. <br><br>We sneaked out of the classroom every time during nap times, and did some extra-work to help him with his schoolwork (Math, Physics, Chemistry, and English). His grade increased a lot from when we started doing the extra-hour work. After that, one of my teachers discovered talent of teaching, and asked me if I want to tutor some of her classes, and do some extra-hours tutoring with some other students too. And that's the start of my teaching experience.</p>
@@ -420,7 +422,7 @@
       </div>
 
       <div class="slide" data-anchor="ENGLISH" id="ENGLISH">
-        <div class="row featurette" style="padding-left:100px; padding-right: 100px">
+        <div class="row featurette">
           <div class="col-lg-12">
             <div class="row">
               <div class="col-lg-2">
@@ -432,7 +434,7 @@
             </div>
           </div>
           <div class="col-lg-5">
-            <p class="lead" style="margin-top: 60px">It has always been a problem that kids in China always learn English by simply rotting all the words, and cannot even pronounce any of them. So, at first, I decided to teaching them how to pronounce a word well by teaching them the pronunciations of each letter and combination, for instance "ee", "ea" etc..</p>
+            <p style="margin-top: 60px">It has always been a problem that kids in China always learn English by simply rotting all the words, and cannot even pronounce any of them. So, at first, I decided to teaching them how to pronounce a word well by teaching them the pronunciations of each letter and combination, for instance "ee", "ea" etc..</p>
             <a href="English-teaching-profile.html">Things I learnt and taught -->></a><br>
             <a href="English-teaching.html">read the whole story of "Kids, English and Me" -->></a>
           </div>
@@ -454,7 +456,7 @@
             <img src="math1.png" width="430">
           </div>
           <div class="col-lg-7" style="margin-top: 5px">
-            <p class="lead">I started with one-on-one tutoring, and it turns out my method really works. Their score rose from 120 and 110 to 140 in just a week, and one of them actually got a perfect score on one of the mathematics competition while the rest from his school did react 90.<br><br>But that was for students already knowing the basic stuffs, I am know trying to start from the very basic level. So, I started writing a curriculum for starters, which after I finish it, will lead students from no foundation at all to almost perfect score. <br><br>I am still teaching the first batch of the students, hope they will make it to the top.</p>
+            <p>I started with one-on-one tutoring, and it turns out my method really works. Their score rose from 120 and 110 to 140 in just a week, and one of them actually got a perfect score on one of the mathematics competition while the rest from his school did react 90.<br><br>But that was for students already knowing the basic stuffs, I am know trying to start from the very basic level. So, I started writing a curriculum for starters, which after I finish it, will lead students from no foundation at all to almost perfect score. <br><br>I am still teaching the first batch of the students, hope they will make it to the top.</p>
           </div> 
         </div>
       </div>
@@ -462,13 +464,14 @@
 
 
     <div class="section" id="wrapper6">
-      <h1 class="font-color-e1e1e1" style="font-size: 50px; text-align: center">Contact Me at:</h1>
-      <h1 class="font-color-e1e1e1" style="font-size: 50px; text-align: center; font-weight: bold">Bill-Yunjie-Zhang@outlook.com</h1>
+      <h1 style="font-size: 50px; text-align: center">Contact Me at:</h1>
+      <h1 style="font-size: 50px; text-align: center; font-weight: bold">Bill-Yunjie-Zhang@outlook.com</h1>
       <div style="text-align: center">
-        <a href="https://github.com/Bill-Yunjie-Zhang" class="font-color-e1e1e1" style="font-size: 25px; text-align: center" target="_blank">visit my github -->></a>
+        <a href="https://github.com/Bill-Yunjie-Zhang" class="github-link" style="font-size: 25px; text-align: center" target="_blank">visit my github -->></a>
       </div>
     </div>
   </div>
+  
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

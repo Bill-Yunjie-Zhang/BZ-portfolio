@@ -1,66 +1,33 @@
-.color-841518{
-	background-color: #841518
-}
-
-.font-color-292929{
-	color: #292929
-}
-
 .font-color-5a5a5a{
 	color: #5a5a5a
 }
 
-.font-color-e1e1e1{
+h1{
+	font-size: 60px
+}
+
+.titles{
+	font-size: 5em; 
+	text-align: center;
+}
+
+.featurette {
+	padding-left: 100px;
+	padding-right: 100px
+}
+
+.align-middle {
+	margin: auto; 
+	display:inline-flex;
+	flex-direction: column;
+	align-items: center;
+	-webkit-box-align: center;
+	align-content: center;
+	vertical-align: middle
+}
+/*the setting of wrappers*/
+#wrapper1{
 	color: #e1e1e1
-}
-
-.font-color-d1b0b2{
-	color: #d1b0b2
-}
- 
-.font-color-841518{
-	color: #841518
-}
-
-.font30px{
-	font-size: 30px
-}
-
-a,
-a:focus,
-a:hover {
-  color: #5a5a5a;
-}
-
-.zhxi-link{
-	color: #d1b0b2
-}
-.zhxi-link:focus{
-	color: #d1b0b2
-}
-.zhxi-link:hover{
-	color: #d1b0b2
-}
-
-.navFont{
-	font-size: 30px;
-	margin-top: 40px;
-	text-align: center
-}
-
-.header-width{
-  max-width: 700px;
-}
-
-.margin{
-	margin-top: 100px;
-	margin-bottom: 100px;
-}
-
-#particle-slider{
-	position: relative;
-	height: 100%;
-	padding: 0px !important;
 }
 
 #wrapper2{
@@ -70,6 +37,9 @@ a:hover {
 #wrapper3{
 	background-color: #841518;
 	color: #f0f0f0
+}
+#wrapper3 h5{
+	color: #d1b0b2
 }
 
 #wrapper4{
@@ -87,22 +57,7 @@ a:hover {
 	color: #e1e1e1
 }
 
-#wrapper1{
-	color: #e1e1e1
-}
-
-#wrapper7{
-	background-color: #3f3f3f
-}
-
-h1{
-	font-size: 60px
-}
-
-.padding{
-	padding:40px
-}
-
+/*animation for whole-page arrow*/
 .fp-controlArrow.fp-next:hover,
 .fp-controlArrow.fp-prev:hover{
     border-bottom: 6px solid;
@@ -111,7 +66,43 @@ h1{
     transition: all 0.5s
 }
 
+/*for particle-slider*/
+#particle-slider{
+	position: relative;
+	height: 100%;
+	padding: 0px !important;
+}
+
+/*for links*/
+.github-link,
+.github-link:focus,
+.github-link:hover{
+	color: #e1e1e1
+}
+
+a,
+a:focus,
+a:hover {
+  color: #5a5a5a;
+}
+
+.zhxi-link,
+.zhxi-link:focus,
+.zhxi-link:hover{
+	color: #d1b0b2
+}
+
 /*for the map*/
+#map {
+	position: absolute;
+	right:0px; 
+	height:100px; 
+	width:209px; 
+	background-color: transparent; 
+	z-index: 9; 
+	margin:0px;
+}
+
 .minimap {
 	opacity: 0.3;
 	float: left;
@@ -121,6 +112,34 @@ h1{
 .minimap:hover {
 	opacity: 1;
 	transition: opacity 1s
+}
+
+/*for the guide*/
+.trailers {
+	position: absolute;
+	background-color: transparent;
+	z-index: 9;
+	text-align:center;
+	color: rgb(83,83,83);
+}
+
+#mapTrailer {
+	right:250px;
+	top:10px; 
+	margin:0px;
+}
+
+#anchorTrailer {
+	text-align:left; 
+	left: 10px; 
+	top: 20%; 
+	width:180px
+}
+
+#anchorTrailerh{
+	left:20%; 
+	bottom:5px; 
+	width:300px
 }
 
 /*for whole page slider*/
@@ -198,6 +217,8 @@ body > .dg {
 }
 
 #popup-intro {
+	height:400px;
+	width:600px;
 	opacity: 0;
     position: relative;
     margin: auto;
@@ -219,10 +240,12 @@ body > .dg {
 #popup-intro > div {
     margin: auto;
     padding: 1rem 1.5rem 0 1.5rem;
+	color:#e0e0e0;
 }
  
 #close-popup {
-    display: none;
+	display: none;
+	color:#e0e0e0;
     position: absolute;
     top: -2rem;
     right: 0px;
