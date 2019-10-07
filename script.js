@@ -80,7 +80,7 @@ const showOverlay = () => {
         $('#popup-text').append($('<p id="popup-text-p3" style="font-size:8px; margin-top:20px; float: right"></p>'))
     }, 500)
     setTimeout(function(){
-        txt = 'I built this web-portfolio to give some basic info of my projects and activities and to showcase some of the skills I have in coding. (99% of the code of this website is written by myself) To view this code or other projects I have done, you can visit my Github at the final page of this website. The process of building this version of web-portfolio is in 2 repositories: "portfolio2"(which I messed up near the end) and "portfolio3".'
+        txt = 'I built this web-portfolio to give some basic info of my projects and activities and to showcase some of the skills I have in coding. (99% of the code of this website is written by myself) To view this code or other projects I have done, you can visit my Github at the last page of this website. The process of building this version of web-portfolio is in 2 repositories: "portfolio2"(which I messed up near the end) and "BZ-portfolio".'
         id = "popup-text-p1"
         speed = 20
         typeWriter(txt, id, speed)
