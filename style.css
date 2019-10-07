@@ -56,6 +56,10 @@ h1{
 	background-color: #292929;
 	color: #e1e1e1
 }
+#wrapper6 h1{
+	font-size: 50px; 
+	text-align: center
+}
 
 /*animation for whole-page arrow*/
 .fp-controlArrow.fp-next:hover,
@@ -77,7 +81,9 @@ h1{
 .github-link,
 .github-link:focus,
 .github-link:hover{
-	color: #e1e1e1
+	color: #e1e1e1;
+	font-size: 25px; 
+	text-align: center
 }
 
 a,
