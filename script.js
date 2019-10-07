@@ -26,9 +26,9 @@ const intro = document.getElementById('popup-intro');
 
 const guide =  () => {
     setTimeout(function(){
-        $('#anchorTrailer').append($("<p style='font-family: Arial, Helvetica, sans-serif'>this menu here can give you a rough idea what each section is about</p><img src='downward.svg' height='40px'>"));
-        $('#anchorTrailerh').append($("<p style='font-family: Arial, Helvetica, sans-serif; margin-bottom: 0px' class='col-lg-10'>this menu here can lead you through each page of a section</p><img class='col-lg-2' src='rightward.svg' style='margin-bottom:0' height='40px'>"));
-        $("#mapTrailer").append($("<h2 style='font-family: Arial, Helvetica, sans-serif'>use the map to select where you wanna go! <img src='rightward.svg' height='50px' style='margin-left: 20px'><br>or</h2><h2 style='font-family: Arial, Helvetica, sans-serif'>scroll down <img class='f' src='downward.svg' height='40px'> or right <img class='f' src='rightward.svg' height='52px'> to browse</h2>"));
+        $('#anchorTrailer').append($("<p class='trailer'>this menu here can give you a rough idea what each section is about</p><img src='downward.svg' height='40px'>"));
+        $('#anchorTrailerh').append($("<p class ='col-lg-10 trailer' style='margin-bottom: 0px'>this menu here can lead you through each page of a section</p><img class='col-lg-2' src='rightward.svg' style='margin-bottom:0' height='40px'>"));
+        $("#mapTrailer").append($("<h2 class='trailer'>use the map to select where you wanna go! <img src='rightward.svg' height='50px' style='margin-left: 20px'><br>or</h2><h2 class='trailer'>scroll down <img class='f' src='downward.svg' height='40px'> or right <img class='f' src='rightward.svg' height='52px'> to browse</h2>"));
         $('#map').addClass('animate-flicker')
         $('#mapTrailer .f').addClass('animate-flicker')
     }, 500)
